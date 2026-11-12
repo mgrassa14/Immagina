@@ -1,0 +1,1 @@
+{"description":"Immagina — learn Italian by seeing. Offline-first web app, picture-first, CEFR A1 up.","name":"immagina","private":true,"scripts":{"serve":"python3 -m http.server 8000","start":"python3 -m http.server 8000"},"version":"0.1.0"}

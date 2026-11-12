@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Immagina — Impara l'italiano vedendo</title>
+  <meta name="description" content="Immagina: learn Italian by seeing. Picture-first, CEFR A1 up, offline-first.">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0f766e">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Immagina</h1>
+    <p class="tagline">Vedi. Ascolta. Parla. — See. Listen. Speak.</p>
+  </header>
+
+  <main>
+    <section id="lesson">
+      <h2 id="unit-title">A1 · Unità 1</h2>
+      <p class="hint">Tocca una carta per sentire la frase. / Tap a card to hear the phrase.</p>
+      <div id="cards" class="cards" aria-live="polite"></div>
+    </section>
+
+    <section id="add-word">
+      <h2>Aggiungi una parola</h2>
+      <p class="hint">Add a word from the front end. It is saved on this device and appears in practice.</p>
+      <form id="add-word-form">
+        <label>
+          Italiano
+          <input name="italian" required placeholder="es. il pane">
+        </label>
+        <label>
+          Immagine (emoji for now — replace with a photo later)
+          <input name="image" placeholder="es. 🍞">
+        </label>
+        <label>
+          Argomento / Topic
+          <input name="topic" placeholder="es. Cibo">
+        </label>
+        <button type="submit">Aggiungi</button>
+      </form>
+      <p id="add-word-status" role="status"></p>
+    </section>
+
+    <section id="about">
+      <h2>Come funziona</h2>
+      <ul>
+        <li>Picture first — no English translation as the main route.</li>
+        <li>Visual, verbal, and written practice in every unit.</li>
+        <li>Offline after the first online load.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

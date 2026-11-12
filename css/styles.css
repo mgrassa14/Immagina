@@ -1,0 +1,72 @@
+/* Immagina — starter styles. Keep it simple and readable. */
+:root {
+  --teal: #0f766e;
+  --ink: #1f2937;
+  --paper: #fffdf7;
+  --card: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+header {
+  background: var(--teal);
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+header h1 { margin: 0; font-size: 2rem; }
+.tagline { margin: 0.25rem 0 0; opacity: 0.9; }
+
+main { max-width: 720px; margin: 0 auto; padding: 1rem; }
+section { margin-bottom: 2rem; }
+.hint { color: #6b7280; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  font: inherit;
+}
+
+.card:hover, .card:focus-visible { border-color: var(--teal); outline: 2px solid var(--teal); }
+.card .image { font-size: 2.5rem; display: block; }
+.card .phrase { font-weight: 700; font-size: 1.1rem; display: block; margin-top: 0.5rem; }
+
+form label { display: block; margin-bottom: 0.75rem; }
+form input {
+  display: block;
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.25rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font: inherit;
+}
+
+button {
+  background: var(--teal);
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  font: inherit;
+  cursor: pointer;
+}
