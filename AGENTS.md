@@ -10,10 +10,7 @@ Read the skill file yourself before doing the work it covers. If the file does n
 | -------------------------------------------------- | ---------------------------------------------------- |
 | Finishing a step, before moving on                 | `.github/skills/explain-back/SKILL.md`               |
 | Finishing a lesson or unit, before calling it done | `.github/skills/italian-unit-check/SKILL.md`         |
-| Maria asks for a commit (whether and when)         | `.github/skills/risk-aware-commits/SKILL.md`         |
-| Writing a commit message (format only)             | `.github/skills/risk-aware-commit-notation/SKILL.md` |
-
-If the two commit skills say the same thing, keep one and delete the other. Never load both for one commit.
+| Maria asks for a commit or commit message          | `.github/skills/risk-aware-commits/SKILL.md`         |
 
 ## How to work
 
