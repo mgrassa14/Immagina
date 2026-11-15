@@ -10,6 +10,7 @@ Keep this up to date after every checked step. This is what survives compaction 
 - **2026-11-11 — Platform:** Offline-first web app, Add to Home Screen on iPhone / iPad, also desktop browser.
 - **2026-11-11 — Tool:** GitHub Copilot **Free** first, in VS Code on desktop, Agent mode, Assisted permissions. Hold off paying for Pro until after Daniel's agentic AI resource is reviewed.
 - **2026-11-11 — Build order:** Phase 1 A1, Phase 2 A2 + roleplays, Phase 3 B1 then B2. Start with A1 Unit 1 only, then check token / credit use.
+- **2026-11-14 — Interface language:** The bottom navigation toggles the interface between Italian and English; lesson words stay Italian.
 
 ## Done
 
@@ -17,6 +18,7 @@ Keep this up to date after every checked step. This is what survives compaction 
 - [x] Basic project scaffold created: folders, AGENTS.md, README, starter data, index.html, styles, app.js, service worker, manifest
 - [x] Settings page added for saved speech speed and appearance (2026-11-14)
 - [x] App entry restored to the repository root; settings remains in `pages/`, with paths updated and local loading verified (2026-11-14)
+- [x] Bottom navigation added for Home, Settings, and the Italian/English interface toggle (2026-11-14)
 - [ ] A1 Unit 1 scene picked — plan lists home / family / food first; not picked yet
 
 ## Next

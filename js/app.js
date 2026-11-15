@@ -48,7 +48,9 @@ document.getElementById('add-word-form').addEventListener('submit', (event) => {
     level: 'A1',
   });
   localStorage.setItem(STORAGE_KEY, JSON.stringify(mine));
-  document.getElementById('add-word-status').textContent = 'Aggiunto! / Added!';
+  const status = document.getElementById('add-word-status');
+  status.dataset.i18nStatus = 'wordAdded';
+  status.textContent = getUiText('wordAdded');
   form.reset();
   loadUnit1().then(render);
 });

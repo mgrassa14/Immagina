@@ -13,14 +13,18 @@ speechRate.addEventListener('input', () => {
 });
 
 speechRate.addEventListener('change', () => {
-  preferences.speechRate = Number(speechRate.value);
-  savePreferences(preferences);
-  status.textContent = 'Impostazioni salvate.';
+  const updatedPreferences = getPreferences();
+  updatedPreferences.speechRate = Number(speechRate.value);
+  savePreferences(updatedPreferences);
+  status.dataset.i18nStatus = 'settingsSaved';
+  status.textContent = getUiText('settingsSaved');
 });
 
 appearance.addEventListener('change', () => {
-  preferences.appearance = appearance.value;
-  savePreferences(preferences);
-  applyAppearance(preferences.appearance);
-  status.textContent = 'Impostazioni salvate.';
+  const updatedPreferences = getPreferences();
+  updatedPreferences.appearance = appearance.value;
+  savePreferences(updatedPreferences);
+  applyAppearance(updatedPreferences.appearance);
+  status.dataset.i18nStatus = 'settingsSaved';
+  status.textContent = getUiText('settingsSaved');
 });

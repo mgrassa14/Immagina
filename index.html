@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Immagina — Impara l'italiano vedendo</title>
+  <title data-i18n="homeTitle">Immagina — Impara l'italiano vedendo</title>
   <meta name="description" content="Immagina: learn Italian by seeing. Picture-first, CEFR A1 up, offline-first.">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0f766e">
@@ -12,51 +12,55 @@
 <body>
   <header>
     <h1>Immagina</h1>
-    <p class="tagline">Vedi. Ascolta. Parla. — See. Listen. Speak.</p>
-    <nav aria-label="Navigazione principale">
-      <a class="settings-link" href="pages/settings.html">Impostazioni</a>
-    </nav>
+    <p class="tagline" data-i18n="tagline">Vedi. Ascolta. Parla. — See. Listen. Speak.</p>
   </header>
 
   <main>
     <section id="lesson">
-      <h2 id="unit-title">A1 · Unità 1</h2>
-      <p class="hint">Tocca una carta per sentire la frase. / Tap a card to hear the phrase.</p>
+      <h2 id="unit-title" data-i18n="unitTitle">A1 · Unità 1</h2>
+      <p class="hint" data-i18n="lessonHint">Tocca una carta per sentire la frase.</p>
       <div id="cards" class="cards" aria-live="polite"></div>
     </section>
 
     <section id="add-word">
-      <h2>Aggiungi una parola</h2>
-      <p class="hint">Add a word from the front end. It is saved on this device and appears in practice.</p>
+      <h2 data-i18n="addWordTitle">Aggiungi una parola</h2>
+      <p class="hint" data-i18n="addWordHint">Add a word from the front end. It is saved on this device and appears in practice.</p>
       <form id="add-word-form">
         <label>
-          Italiano
-          <input name="italian" required placeholder="es. il pane">
+          <span data-i18n="italianWordLabel">Italiano</span>
+          <input name="italian" required data-i18n-placeholder="italianWordPlaceholder" placeholder="es. il pane">
         </label>
         <label>
-          Immagine (emoji for now — replace with a photo later)
-          <input name="image" placeholder="es. 🍞">
+          <span data-i18n="imageLabel">Immagine (emoji for now — replace with a photo later)</span>
+          <input name="image" data-i18n-placeholder="imagePlaceholder" placeholder="es. 🍞">
         </label>
         <label>
-          Argomento / Topic
-          <input name="topic" placeholder="es. Cibo">
+          <span data-i18n="topicLabel">Argomento / Topic</span>
+          <input name="topic" data-i18n-placeholder="topicPlaceholder" placeholder="es. Cibo">
         </label>
-        <button type="submit">Aggiungi</button>
+        <button type="submit" data-i18n="addWordButton">Aggiungi</button>
       </form>
       <p id="add-word-status" role="status"></p>
     </section>
 
     <section id="about">
-      <h2>Come funziona</h2>
+      <h2 data-i18n="aboutTitle">Come funziona</h2>
       <ul>
-        <li>Picture first — no English translation as the main route.</li>
-        <li>Visual, verbal, and written practice in every unit.</li>
-        <li>Offline after the first online load.</li>
+        <li data-i18n="aboutPictureFirst">Picture first — learn Italian directly from what you see.</li>
+        <li data-i18n="aboutPractice">Visual, verbal, and written practice in every unit.</li>
+        <li data-i18n="aboutOffline">Offline after the first online load.</li>
       </ul>
     </section>
   </main>
 
+  <nav class="bottom-nav" aria-label="Navigazione" data-i18n-aria-label="navigationLabel">
+    <a href="index.html" aria-current="page" data-i18n="homeLink">Home</a>
+    <a href="pages/settings.html" data-i18n="settingsLink">Impostazioni</a>
+    <button id="language-toggle" type="button">English</button>
+  </nav>
+
   <script src="js/preferences.js"></script>
+  <script src="js/language.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

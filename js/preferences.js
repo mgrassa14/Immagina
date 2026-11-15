@@ -1,12 +1,12 @@
 // Shared settings storage and appearance behavior for both app pages.
 const PREFERENCES_KEY = 'immagina-preferences-v1';
-const DEFAULT_PREFERENCES = { speechRate: 1, appearance: 'system' };
+const DEFAULT_PREFERENCES = { speechRate: 1, appearance: 'system', language: 'it' };
 
 function getPreferences() {
   const saved = localStorage.getItem(PREFERENCES_KEY);
   if (!saved) return { ...DEFAULT_PREFERENCES };
 
-  const preferences = JSON.parse(saved);
+  const preferences = { ...DEFAULT_PREFERENCES, ...JSON.parse(saved) };
   if (!Number.isFinite(preferences.speechRate) ||
       preferences.speechRate < 0.6 ||
       preferences.speechRate > 1.4) {
@@ -14,6 +14,9 @@ function getPreferences() {
   }
   if (!['system', 'light', 'dark'].includes(preferences.appearance)) {
     throw new Error('Saved appearance setting is invalid.');
+  }
+  if (!['it', 'en'].includes(preferences.language)) {
+    throw new Error('Saved interface language is invalid.');
   }
   return preferences;
 }
