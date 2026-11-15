@@ -3,7 +3,7 @@
 // Maria adds from the front end (saved in localStorage on this device).
 // Audio uses the device's built-in Italian voice (speechSynthesis).
 
-const DATA_URL = 'data/a1-unit1.json';
+const DATA_URL = '../data/a1-unit1.json';
 const STORAGE_KEY = 'immagina-my-words-v1';
 
 async function loadUnit1() {
@@ -17,6 +17,7 @@ function speak(text) {
   if (!('speechSynthesis' in window)) return;
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = 'it-IT';
+  utterance.rate = getPreferences().speechRate;
   speechSynthesis.cancel();
   speechSynthesis.speak(utterance);
 }
@@ -56,5 +57,5 @@ loadUnit1().then(render);
 
 // Register the service worker for offline use (only on http/https, not file://).
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js').catch(() => {});
+  navigator.serviceWorker.register('../sw.js').catch(() => {});
 }

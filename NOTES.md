@@ -15,11 +15,12 @@ Keep this up to date after every checked step. This is what survives compaction 
 
 - [x] Plan approved (Italian-only CEFR plan, 2026-11-11)
 - [x] Basic project scaffold created: folders, AGENTS.md, README, starter data, index.html, styles, app.js, service worker, manifest
+- [x] Settings page added for saved speech speed and appearance (2026-11-14)
 - [ ] A1 Unit 1 scene picked — plan lists home / family / food first; not picked yet
 
 ## Next
 
-1. `git init`, first commit.
+1. Review the move of both HTML pages into `pages/` and verify their offline links.
 2. Data shape for A1 Unit 1 only.
 3. One visual exercise.
 4. One verbal and one written exercise.

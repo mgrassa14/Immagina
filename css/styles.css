@@ -37,6 +37,58 @@ header {
   -webkit-backdrop-filter: saturate(180%) blur(20px);
 }
 
+header nav {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.settings-link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.settings-control {
+  margin-top: 1.25rem;
+}
+
+.settings-control label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.settings-control input[type="range"] {
+  width: 100%;
+  min-height: 2rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  accent-color: var(--accent);
+}
+
+.settings-control output {
+  display: block;
+  color: var(--secondary-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.settings-control select {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--separator);
+  border-radius: 12px;
+  background: var(--surface-muted);
+  color: var(--ink);
+  font: inherit;
+}
+
+#settings-status {
+  min-height: 1.5em;
+  margin-bottom: 0;
+  color: #248a3d;
+}
+
 header h1 {
   margin: 0;
   font-size: 1.1rem;
@@ -147,7 +199,9 @@ button:not(.card) {
 }
 
 button:focus-visible,
-input:focus-visible {
+input:focus-visible,
+select:focus-visible,
+a:focus-visible {
   outline: 3px solid rgb(0 122 255 / 35%);
   outline-offset: 2px;
 }
@@ -203,8 +257,52 @@ section li + li {
   }
 
   @media (hover: hover) {
-    .card:hover {
+    :root:not([data-theme="light"]) .card:hover {
       background: #3a3a3c;
     }
+  }
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --background: #f2f2f7;
+  --surface: #ffffff;
+  --surface-muted: #f2f2f7;
+  --ink: #1c1c1e;
+  --secondary-ink: #8e8e93;
+  --separator: #e5e5ea;
+  --shadow: 0 2px 12px rgb(0 0 0 / 4%);
+}
+
+:root[data-theme="light"] header {
+  background: rgb(255 255 255 / 88%);
+}
+
+:root[data-theme="light"] section {
+  border-color: rgb(0 0 0 / 3%);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #000000;
+  --surface: #1c1c1e;
+  --surface-muted: #2c2c2e;
+  --ink: #f2f2f7;
+  --secondary-ink: #98989f;
+  --separator: #38383a;
+  --shadow: 0 2px 12px rgb(0 0 0 / 18%);
+}
+
+:root[data-theme="dark"] header {
+  background: rgb(28 28 30 / 88%);
+}
+
+:root[data-theme="dark"] section {
+  border-color: rgb(255 255 255 / 5%);
+}
+
+@media (hover: hover) {
+  :root[data-theme="dark"] .card:hover {
+    background: #3a3a3c;
   }
 }
