@@ -3,7 +3,7 @@
 // Copilot: keep this small, and explain what it caches.
 const CACHE = 'immagina-v3';
 const FILES = [
-  'pages/index.html',
+  'index.html',
   'pages/settings.html',
   'css/styles.css',
   'js/app.js',

@@ -14,8 +14,8 @@
 3. Open Copilot Chat, switch to **Agent** mode, and set permissions to **Assisted** (or approve each tool call — Allow Once).
 4. Paste the brief from `docs/copilot-starter-brief.md` — A1 Unit 1 only, one step at a time, then stop and check.
 5. Run it locally:
-   - Easiest: VS Code extension **Live Server** — right-click `pages/index.html` → Open with Live Server.
-   - Or in a terminal: `python3 -m http.server 8000` then open http://localhost:8000/pages/
+   - Easiest: VS Code extension **Live Server** — right-click `index.html` → Open with Live Server.
+   - Or in a terminal: `python3 -m http.server 8000` then open http://localhost:8000/
    - Or: `npm start` (same Python server, see `package.json`)
 
 ## What is in this starter
@@ -25,8 +25,8 @@ immagina/
   AGENTS.md                  Rules Copilot reads at the start of every chat
   NOTES.md                   Decisions, done, next — keep this up to date
   README.md                  This file
-  pages/                     The app and settings HTML pages
-    index.html               The app shell
+  index.html                 The app shell
+  pages/
     settings.html            Saved speech and appearance settings
   manifest.json              Add to Home Screen name, icons, colours
   sw.js                      Basic service worker for offline caching
